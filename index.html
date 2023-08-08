@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehal Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        /* css for accordion  */
+
+        #accordion {
+            margin: 100px auto;
+            width: 600px;
+        }
+
+        #accordion li {
+            list-style: none;
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgb(210, 245, 214);
+            padding: 10px;
+            border: solid 2px #333;
+            border-radius: 4px;
+        }
+
+        #accordion li label {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            /* color: #c20000;  */
+        }
+
+        #accordion li label span {
+
+            font-size: 22px;
+            /* color: #000000; */
+        }
+
+        #accordion label+input[type="radio"] {
+            display: inline;
+        }
+
+        #accordion .content {
+            padding: 0 10px;
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        #accordion label+input[type="radio"]:checked+.content {
+            max-height: 400px;
+        }
+
+
+        /* css for button */
+
+        #button1 {
+            margin: 30px auto;
+            height: 50px;
+            width: 600px;
+            /* display: flex; */
+            align-items: center;
+            justify-content: space-between;
+            font-size: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #fff;
+            background-color: darkgreen;
+        }
+
+        /* css for main heading */
+        h2 {
+
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::before {
+            content: "";
+            height: 2px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: -3;
+
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -2;
+
+        }
+
+        #name {
+            background: white;
+            padding: 0 10px;
+            color: #1faf78;
+        }
+
+
+
+        h6 {
+
+
+            text-align: center;
+            position: relative;
+        }
+
+        h6::before {
+            content: "";
+            height: 0.5px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            right: 0;
+
+
+        }
+
+        h6::after {
+            content: "";
+            height: 0.5px;
+            width: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+
+        }
+
+        #textend {
+            float: right;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="accordion">
+        <h2><span id="name"> Bundle & Save</span></h2>
+
+        <!-- html code for 1st pair -->
+        <li>
+            <label for="first" id="radio_lbl"> 1 pair <br>DKK 195.00 <span><B>50% OFF</B></span> </label>
+            <input type="radio" name="accordion" id="first" checked>
+            <div class="content">
+                <div>
+                    <pre>         size                    colour</pre>
+                </div>
+                <div> &nbsp;
+                    #1 <select style="width: 100px; height: 30px;" id="sect1">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect2">
+                        <option>colour</option>
+                    </select>
+                </div>
+                <br>
+                <div> &nbsp;
+                    #2 <select style="width: 100px; height: 30px;" id="sect3">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect4">
+                        <option>colour</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            </div>
+
+        </li>
+        <!-- html code for 2nd pair -->
+        <li>
+            <label for="second"> 2 pair <br>Dkk 345.00 <h6>DKK 195.00</h6><span> Most popular <br>&nbsp;
+                    <B>40%OFF</B></span> </label>
+            <input type="radio" name="accordion" id="second">
+            <div class="content">
+                <div>
+                    <pre>         size                    colour</pre>
+                </div>
+                <div> &nbsp;
+                    #1 <select style="width: 100px; height: 30px;" id="sect5">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect6">
+                        <option>colour</option>
+                    </select>
+                </div>
+                <br>
+                <div> &nbsp;
+                    #2 <select style="width: 100px; height: 30px;" id="sect7">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect8">
+                        <option>colour</option>
+                    </select>
+                </div>
+            </div>
+
+            </div>
+
+        </li>
+
+        <!-- html code for 3rd pair -->
+        <li>
+            <label for="third">3 pair <br>DKK 528.00 <span> <B> 60% OFF</B></span> </label>
+            <input type="radio" name="accordion" id="third">
+            <div class="content">
+                <div>
+                    <pre>         size                    colour</pre>
+                </div>
+                <div> &nbsp;
+                    #1 <select style="width: 100px; height: 30px;" id="sect9">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect10">
+                        <option>colour</option>
+                    </select>
+                </div>
+                <br>
+                <div> &nbsp;
+                    #2 <select style="width: 100px; height: 30px;" id="sect11">
+                        <option>size</option>
+                    </select> &nbsp; <select style="width: 100px; height: 30px;" id="sect12">
+                        <option>colour</option>
+                    </select>
+                </div>
+            </div>
+
+
+            </div>
+
+        </li>
+
+        <!-- code for button and copy entity -->
+
+        <p>Frere 2 Day Shipping &nbsp; <span id="textend"> Total : <B>DKK 360.00</B></span></p>
+        <input type="button" value="+Add to Cart" id="button1">
+        <h4 style="text-align: right;">&copy; <i>Powered by pumper</i></h4>
+    </ul>
+    dro
+
+
+</body>
+
+<script>
+
+
+    let size = ["small", "medium", "large"];
+    let small = ["black", "white", "red"];
+    let medium = ["green", "yellow", "gray"];
+    let large = ["yellow", "brown", "green"];
+    // let xl = ["blue","red","green"];
+    // let xxl = ["green","blue","black","red","drakgreen"];
+
+
+
+    let sect1 = document.getElementById("sect1");
+    let sect2 = document.getElementById("sect2");
+    let sect3 = document.getElementById("sect3");
+    let sect4 = document.getElementById("sect4");
+
+
+    let sect5 = document.getElementById("sect5");
+    let sect6 = document.getElementById("sect6");
+    let sect7 = document.getElementById("sect7");
+    let sect8 = document.getElementById("sect8");
+
+
+    let sect9 = document.getElementById("sect9");
+    let sect10 = document.getElementById("sect10");
+    let sect11 = document.getElementById("sect11");
+    let sect12 = document.getElementById("sect12");
+
+
+    // 1st pair script
+    // #1 dropdown
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect1.appendChild(option);
+    });
+
+    sect1.onchange = function () {
+        sect2.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect2(small);
+        }
+        if (this.value == "medium") {
+            addTosect2(medium);
+        }
+        if (this.value == "large") {
+            addTosect2(large);
+        }
+
+    }
+
+
+    function addTosect2(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect2.appendChild(option);
+
+        });
+    }
+    // #2 dropdown
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect3.appendChild(option);
+    });
+    sect3.onchange = function () {
+        sect4.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect4(small);
+        }
+        if (this.value == "medium") {
+            addTosect4(medium);
+        }
+        if (this.value == "large") {
+            addTosect4(large);
+        }
+
+    }
+    function addTosect4(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect4.appendChild(option);
+
+        });
+    }
+
+
+    // 2nd pair script
+
+    // #1 dropdown
+
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect5.appendChild(option);
+    });
+
+    sect5.onchange = function () {
+        sect6.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect6(small);
+        }
+        if (this.value == "medium") {
+            addTosect6(medium);
+        }
+        if (this.value == "large") {
+            addTosect6(large);
+        }
+
+    }
+
+
+    function addTosect6(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect6.appendChild(option);
+
+        });
+    }
+
+    // #2 dropdown
+
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect7.appendChild(option);
+    });
+    sect7.onchange = function () {
+        sect8.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect8(small);
+        }
+        if (this.value == "medium") {
+            addTosect8(medium);
+        }
+        if (this.value == "large") {
+            addTosect8(large);
+        }
+
+    }
+    function addTosect8(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect8.appendChild(option);
+
+        });
+    }
+
+    // 3rd pair script
+    // #1 dropdown
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect9.appendChild(option);
+    });
+
+    sect9.onchange = function () {
+        sect10.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect10(small);
+        }
+        if (this.value == "medium") {
+            addTosect10(medium);
+        }
+        if (this.value == "large") {
+            addTosect10(large);
+        }
+
+    }
+
+
+    function addTosect10(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect10.appendChild(option);
+
+        });
+    }
+    // #2 dropdown
+    size.forEach(function addsize(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        sect11.appendChild(option);
+    });
+    sect11.onchange = function () {
+        sect12.innerHTML = "<option></option>";
+        if (this.value == "small") {
+            addTosect12(small);
+        }
+        if (this.value == "medium") {
+            addTosect12(medium);
+        }
+        if (this.value == "large") {
+            addTosect12(large);
+        }
+
+    }
+    function addTosect12(arr) {
+        arr.forEach(function (item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            sect12.appendChild(option);
+
+        });
+    }
+
+
+
+</script>
+
+</html>
